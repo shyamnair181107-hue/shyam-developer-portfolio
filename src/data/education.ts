@@ -11,6 +11,21 @@ export interface TimelineStage {
 
 export const journeyTimeline: TimelineStage[] = [
   {
+    period: "2025 Completion",
+    badge: "76.33% HSC",
+    title: "Arya Gurukul International Junior College, Airoli",
+    subtitle: "Higher Secondary Certificate (HSC — Class XII)",
+    description:
+      "Completed higher secondary education in science and mathematics stream, establishing strong mathematical reasoning and quantitative problem-solving foundations.",
+    highlights: [
+      "Physics, Chemistry, and Advanced Mathematics",
+      "Foundational computer science concepts and logical problem solving",
+      "Ranked among top percentile students in academic coursework"
+    ],
+    type: "academic",
+    icon: "GraduationCap"
+  },
+  {
     period: "2025 – 2029 (Expected)",
     badge: "First Year CGPA: 9.64 / 10.0",
     title: "Pillai College of Engineering, Navi Mumbai",
@@ -42,21 +57,6 @@ export const journeyTimeline: TimelineStage[] = [
     ],
     type: "development",
     icon: "Code"
-  },
-  {
-    period: "2025 Completion",
-    badge: "76.33% HSC",
-    title: "Arya Gurukul International Junior College, Airoli",
-    subtitle: "Higher Secondary Certificate (HSC — Class XII)",
-    description:
-      "Completed higher secondary education in science and mathematics stream, establishing strong mathematical reasoning and quantitative problem-solving foundations.",
-    highlights: [
-      "Physics, Chemistry, and Advanced Mathematics",
-      "Foundational computer science concepts and logical problem solving",
-      "Ranked among top percentile students in academic coursework"
-    ],
-    type: "academic",
-    icon: "GraduationCap"
   },
   {
     period: "Upcoming Horizons",
