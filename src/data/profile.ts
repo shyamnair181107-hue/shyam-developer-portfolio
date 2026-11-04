@@ -5,8 +5,10 @@ export interface ProfileData {
   statusLabel: string;
   academicLevel: string;
   branch: string;
+  institution: string;
   institutionState: string;
   country: string;
+  cgpa: string;
   primaryTagline: string;
   supportingTagline: string;
   shortBio: string;
@@ -18,49 +20,52 @@ export interface ProfileData {
   }[];
   profileImage: string;
   resumeUrl: string;
+  resumeImageUrl: string;
 }
 
 export const profileData: ProfileData = {
   fullName: "Shyam Sivadasan Nair",
   brandInitials: "SN",
-  professionalRole: "Computer Science Engineering Student | Aspiring Software Developer | Technology Enthusiast",
-  statusLabel: "OPEN TO INTERNSHIPS & COLLABORATIONS",
-  academicLevel: "Second Year Engineering",
-  branch: "Computer Science Engineering",
-  institutionState: "Undergraduate Studies",
+  professionalRole: "Computer Science Engineering Student | Aspiring Software Developer",
+  statusLabel: "OPEN TO INTERNSHIPS & OPPORTUNITIES",
+  academicLevel: "Second Year B.Tech (2025 – 2029 Expected)",
+  branch: "Computer Engineering",
+  institution: "Pillai College of Engineering, Navi Mumbai",
+  institutionState: "Navi Mumbai, Maharashtra",
   country: "India",
+  cgpa: "9.64 / 10.0 (First Year)",
   primaryTagline: "Turning Curiosity Into Code. Turning Ideas Into Reality.",
   supportingTagline: "Building Digital Experiences, Exploring Technology and Engineering What's Next.",
   shortBio:
-    "I enjoy transforming ideas into meaningful digital experiences. I explore technologies, build practical applications and continuously challenge myself to become a better engineer.",
+    "Second-year Computer Engineering undergraduate at Pillai College of Engineering (9.64 CGPA) with hands-on experience in software development, Python, Flask, React, and relational databases. Passionate about solving practical problems through clean architecture.",
   aboutIntro: [
-    "I'm Shyam Sivadasan Nair, a second-year Computer Science Engineering student with a growing passion for software development, problem-solving and emerging technologies.",
-    "I enjoy exploring new tools, experimenting with ideas and building applications that solve practical problems.",
-    "My journey is driven by curiosity, creativity and the desire to continuously improve my technical capabilities."
+    "I'm Shyam Sivadasan Nair, a Computer Engineering student at Pillai College of Engineering, Navi Mumbai, with a proven academic record (9.64 CGPA) and industry experience as a Software Development Intern at Tripple One Solutions.",
+    "I have built and deployed full-stack web platforms, collaborated in hackathon initiatives (including RakshaNet and SIH 2026), and engineered real-time systems using Python, Flask, React, and MySQL.",
+    "My technical journey is driven by deep curiosity, structured problem-solving, and the discipline to write clean, maintainable, and high-performance software."
   ],
   infoCards: [
     {
       title: "EDUCATION",
-      description: "Computer Science Engineering — Second Year Undergraduate.",
+      description: "Pillai College of Engineering, Navi Mumbai — B.Tech Computer Engineering (First Year CGPA: 9.64/10.0).",
       icon: "GraduationCap"
     },
     {
-      title: "INTERESTS",
-      description: "Software Development, Web Technologies, AI and Problem Solving.",
+      title: "EXPERIENCE",
+      description: "Software Development Intern at Tripple One Solutions — Python, OOP, and web module development.",
+      icon: "Briefcase"
+    },
+    {
+      title: "PROJECTS",
+      description: "Campus Eats, Grand Azure, RakshaNet, and FDR MITRA workflow systems.",
       icon: "Sparkles"
     },
     {
-      title: "MINDSET",
-      description: "Continuous Learning, Innovation and Collaboration.",
-      icon: "Compass"
-    },
-    {
       title: "GOAL",
-      description: "Becoming a skilled software engineer and creating meaningful technology solutions.",
+      description: "Securing impactful software engineering internships and contributing to production systems.",
       icon: "Target"
     }
   ],
-  // User can place their actual photo at /images/profile.jpg or update this path
   profileImage: "/images/profile.jpg",
-  resumeUrl: "/resume.pdf"
+  resumeUrl: "/resume.pdf",
+  resumeImageUrl: "/images/resume.jpg"
 };

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, Sparkles, Compass, Target, Code, Cpu } from "lucide-react";
+import { GraduationCap, Sparkles, Compass, Target, Code, Cpu, Briefcase } from "lucide-react";
 import { profileData } from "@/data/profile";
 import { Terminal } from "./Terminal";
 
@@ -11,7 +11,8 @@ export function About() {
     GraduationCap: <GraduationCap className="w-6 h-6 text-accent-cyan" />,
     Sparkles: <Sparkles className="w-6 h-6 text-accent-violet" />,
     Compass: <Compass className="w-6 h-6 text-accent-blue" />,
-    Target: <Target className="w-6 h-6 text-emerald-400" />
+    Target: <Target className="w-6 h-6 text-emerald-400" />,
+    Briefcase: <Briefcase className="w-6 h-6 text-accent-violet" />
   };
 
   return (

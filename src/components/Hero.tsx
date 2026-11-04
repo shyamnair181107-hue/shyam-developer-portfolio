@@ -49,7 +49,7 @@ export function Hero() {
             </div>
 
             {/* Main Name Heading with Futuristic Animated Gradient */}
-            <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] mb-4 text-white">
+            <h1 className="font-heading text-3xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] mb-4 text-white break-words">
               SHYAM <br />
               <span className="text-gradient-primary">
                 SIVADASAN NAIR
@@ -57,18 +57,18 @@ export function Hero() {
             </h1>
 
             {/* Professional Role Banner */}
-            <p className="text-base sm:text-lg font-mono text-accent-cyan font-medium mb-4 flex items-center gap-2">
+            <p className="text-sm sm:text-lg font-mono text-accent-cyan font-medium mb-4 flex items-center gap-2 flex-wrap">
               <Terminal className="w-4 h-4 text-accent-violet shrink-0" />
               <span>{profileData.professionalRole}</span>
             </p>
 
             {/* Bio Paragraph */}
-            <p className="text-sm sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-8">
+            <p className="text-xs sm:text-base text-text-secondary max-w-2xl leading-relaxed mb-8">
               {profileData.shortBio}
             </p>
 
-            {/* 3 Primary CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 w-full sm:w-auto">
+            {/* 3 Primary CTA Buttons (Responsive Stack on Mobile) */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
               {/* CTA 1: Explore Work */}
               <button
                 onClick={() => handleScrollTo("projects")}
@@ -81,8 +81,7 @@ export function Hero() {
               {/* CTA 2: Download Resume */}
               <a
                 href={profileData.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                download="Shyam_Sivadasan_Nair_Resume.pdf"
                 className="group inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-medium text-sm text-white glass-panel border border-white/10 hover:border-accent-cyan/60 hover:shadow-glow-cyan transition-all duration-300"
               >
                 <FileDown className="w-4 h-4 text-accent-cyan group-hover:animate-bounce" />
@@ -131,7 +130,7 @@ export function Hero() {
               {/* Outer Glowing Gradient Border */}
               <div className="relative p-1 rounded-3xl bg-gradient-to-br from-accent-violet via-accent-cyan to-accent-blue shadow-glow-dual transition-transform duration-500 group-hover:scale-[1.02]">
                 {/* Inner Image Container */}
-                <div className="relative w-64 h-80 sm:w-80 sm:h-96 rounded-[22px] overflow-hidden bg-background-card flex items-center justify-center">
+                <div className="relative w-60 h-76 sm:w-80 sm:h-96 max-w-[85vw] rounded-[22px] overflow-hidden bg-background-card flex items-center justify-center">
                   <Image
                     src={imgSrc}
                     alt="Shyam Sivadasan Nair - Computer Science Engineering Student & Developer"
@@ -145,8 +144,8 @@ export function Hero() {
                   <div className="absolute inset-0 bg-gradient-to-t from-background-card via-transparent to-transparent opacity-60" />
 
                   {/* Tech HUD Line Overlay */}
-                  <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl glass-panel border border-white/10 backdrop-blur-md">
-                    <div className="flex items-center justify-between text-[11px] font-mono text-text-secondary">
+                  <div className="absolute bottom-3 left-3 right-3 p-2.5 sm:p-3 rounded-xl glass-panel border border-white/10 backdrop-blur-md">
+                    <div className="flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-text-secondary">
                       <span className="flex items-center gap-1.5 text-accent-cyan">
                         <Cpu className="w-3.5 h-3.5 text-accent-cyan animate-pulse" />
                         SYS.ONLINE
@@ -161,14 +160,14 @@ export function Hero() {
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -right-4 sm:-right-6 p-2.5 rounded-xl glass-panel border border-accent-cyan/40 shadow-glow-cyan flex items-center gap-2 backdrop-blur-md"
+                className="absolute -top-3 -right-2 sm:-right-6 p-2 sm:p-2.5 rounded-xl glass-panel border border-accent-cyan/40 shadow-glow-cyan flex items-center gap-2 backdrop-blur-md scale-90 sm:scale-100"
               >
-                <div className="w-7 h-7 rounded-lg bg-accent-cyan/15 flex items-center justify-center text-accent-cyan">
-                  <Code2 className="w-4 h-4" />
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-accent-cyan/15 flex items-center justify-center text-accent-cyan">
+                  <Code2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div className="text-left">
-                  <div className="font-heading text-xs font-bold text-white">Full-Stack</div>
-                  <div className="font-mono text-[10px] text-accent-cyan">React • Next.js • Node</div>
+                  <div className="font-heading text-[11px] sm:text-xs font-bold text-white">Full-Stack</div>
+                  <div className="font-mono text-[9px] sm:text-[10px] text-accent-cyan">React • Next.js • Python</div>
                 </div>
               </motion.div>
 
@@ -176,14 +175,14 @@ export function Hero() {
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-4 -left-4 sm:-left-6 p-2.5 rounded-xl glass-panel border border-accent-violet/40 shadow-glow-violet flex items-center gap-2 backdrop-blur-md"
+                className="absolute -bottom-3 -left-2 sm:-left-6 p-2 sm:p-2.5 rounded-xl glass-panel border border-accent-violet/40 shadow-glow-violet flex items-center gap-2 backdrop-blur-md scale-90 sm:scale-100"
               >
-                <div className="w-7 h-7 rounded-lg bg-accent-violet/20 flex items-center justify-center text-accent-violet">
-                  <Layers className="w-4 h-4" />
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-accent-violet/20 flex items-center justify-center text-accent-violet">
+                  <Layers className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div className="text-left">
-                  <div className="font-heading text-xs font-bold text-white">Engineering</div>
-                  <div className="font-mono text-[10px] text-text-secondary">Algorithms &amp; Systems</div>
+                  <div className="font-heading text-[11px] sm:text-xs font-bold text-white">Engineering</div>
+                  <div className="font-mono text-[9px] sm:text-[10px] text-text-secondary">Pillai • 9.64 CGPA</div>
                 </div>
               </motion.div>
             </div>

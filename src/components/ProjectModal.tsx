@@ -46,13 +46,13 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl glass-panel border border-accent-cyan/30 bg-[#0B0F24] p-6 sm:p-8 shadow-2xl z-10 text-left"
+          className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl glass-panel border border-accent-cyan/30 bg-[#0B0F24] p-4 sm:p-8 shadow-2xl z-10 text-left"
         >
           {/* Close Button */}
           <button
             onClick={onClose}
             aria-label="Close modal"
-            className="absolute top-5 right-5 p-2 rounded-full bg-white/5 border border-white/10 text-text-secondary hover:text-white hover:bg-white/10 transition-colors"
+            className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-full bg-white/10 border border-white/10 text-text-secondary hover:text-white hover:bg-white/20 transition-colors z-20"
           >
             <X className="w-5 h-5" />
           </button>

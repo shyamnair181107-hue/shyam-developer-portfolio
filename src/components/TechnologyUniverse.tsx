@@ -131,18 +131,18 @@ export function TechnologyUniverse() {
 
     render();
 
-    // Canvas click / hover detection
-    const handleMouseMove = (e: MouseEvent) => {
+    // Canvas click / hover / touch detection
+    const handleInteract = (clientX: number, clientY: number) => {
       const rect = canvas.getBoundingClientRect();
-      const mouseX = e.clientX - rect.left;
-      const mouseY = e.clientY - rect.top;
+      const mouseX = clientX - rect.left;
+      const mouseY = clientY - rect.top;
 
       let found: TechNode | null = null;
       for (let i = 0; i < nodes.length; i++) {
         const n = nodes[i];
         const dx = mouseX - n.x;
         const dy = mouseY - n.y;
-        if (Math.sqrt(dx * dx + dy * dy) < n.radius + 8) {
+        if (Math.sqrt(dx * dx + dy * dy) < n.radius + 12) {
           found = n;
           break;
         }
@@ -150,11 +150,25 @@ export function TechnologyUniverse() {
       setActiveNode(found);
     };
 
+    const handleMouseMove = (e: MouseEvent) => {
+      handleInteract(e.clientX, e.clientY);
+    };
+
+    const handleTouch = (e: TouchEvent) => {
+      if (e.touches && e.touches.length > 0) {
+        handleInteract(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    };
+
     canvas.addEventListener("mousemove", handleMouseMove);
+    canvas.addEventListener("touchstart", handleTouch, { passive: true });
+    canvas.addEventListener("touchmove", handleTouch, { passive: true });
 
     return () => {
       window.removeEventListener("resize", handleResize);
       canvas.removeEventListener("mousemove", handleMouseMove);
+      canvas.removeEventListener("touchstart", handleTouch);
+      canvas.removeEventListener("touchmove", handleTouch);
       cancelAnimationFrame(animId);
     };
   }, []);
