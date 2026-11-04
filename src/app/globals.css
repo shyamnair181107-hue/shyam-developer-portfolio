@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-space-grotesk: 'Space Grotesk', system-ui, sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #070812;
+  color: #F5F7FF;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #070812;
+  color: #F5F7FF;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  selection-background-color: #8B5CF6;
+  selection-color: #ffffff;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.4);
+  color: #00F0FF;
+}
+
+/* Custom Futuristic Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070812;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E2340;
+  border-radius: 4px;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B5CF6;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(17, 21, 40, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(22, 27, 53, 0.85);
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.2), 0 0 15px -5px rgba(0, 240, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.glass-navbar {
+  background: rgba(7, 8, 18, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Futuristic Tech Grid Overlay */
+.tech-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Subtle Glowing Gradient Text */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #F5F7FF 0%, #A78BFA 50%, #00F0FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #00F0FF 0%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-violet {
+  background: linear-gradient(135deg, #C084FC 0%, #8B5CF6 50%, #38BDF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Reduced Motion Mode */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

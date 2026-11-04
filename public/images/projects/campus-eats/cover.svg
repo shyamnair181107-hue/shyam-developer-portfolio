@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="ceBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0B18"/>
+      <stop offset="60%" stop-color="#141126"/>
+      <stop offset="100%" stop-color="#1A0D2E"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+    <filter id="glowPurple">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#ceBg)"/>
+
+  <!-- Matrix / Grid pattern -->
+  <g opacity="0.12" stroke="#8B5CF6" stroke-width="1">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="150" y1="0" x2="150" y2="675"/>
+    <line x1="300" y1="0" x2="300" y2="675"/>
+    <line x1="450" y1="0" x2="450" y2="675"/>
+    <line x1="600" y1="0" x2="600" y2="675"/>
+    <line x1="750" y1="0" x2="750" y2="675"/>
+    <line x1="900" y1="0" x2="900" y2="675"/>
+    <line x1="1050" y1="0" x2="1050" y2="675"/>
+  </g>
+
+  <!-- Ambient Glow -->
+  <circle cx="850" cy="300" r="260" fill="#8B5CF6" opacity="0.15" filter="url(#glowPurple)"/>
+  <circle cx="300" cy="500" r="220" fill="#EC4899" opacity="0.1" filter="url(#glowPurple)"/>
+
+  <!-- Floating UI Device Mockup & Order Stream -->
+  <g transform="translate(680, 110)">
+    <!-- Smartphone Glass Shell -->
+    <rect width="380" height="480" rx="36" fill="#0C0E1F" stroke="#475569" stroke-width="2"/>
+    <rect width="380" height="480" rx="36" fill="none" stroke="url(#purpleGrad)" stroke-width="1.5" opacity="0.7"/>
+
+    <!-- Screen notch -->
+    <rect x="130" y="14" width="120" height="18" rx="9" fill="#030712"/>
+
+    <!-- App Header -->
+    <text x="36" y="65" fill="#F8FAFC" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="bold">Campus Dining Hub</text>
+    <text x="36" y="85" fill="#94A3B8" font-family="sans-serif" font-size="12">Live Orders • Kitchen Sync</text>
+
+    <!-- Food Item Card 1 -->
+    <rect x="30" y="105" width="320" height="85" rx="14" fill="#151932" stroke="#1E293B"/>
+    <rect x="45" y="118" width="58" height="58" rx="10" fill="#2E1065"/>
+    <text x="65" y="154" fill="#F472B6" font-size="24">☕</text>
+    <text x="118" y="138" fill="#F1F5F9" font-family="sans-serif" font-size="14" font-weight="bold">Espresso &amp; Snack combo</text>
+    <text x="118" y="156" fill="#10B981" font-family="monospace" font-size="12">READY FOR PICKUP</text>
+    <text x="118" y="174" fill="#64748B" font-family="sans-serif" font-size="11">Counter #2 • Token #42</text>
+
+    <!-- Food Item Card 2 -->
+    <rect x="30" y="205" width="320" height="85" rx="14" fill="#151932" stroke="#1E293B"/>
+    <rect x="45" y="218" width="58" height="58" rx="10" fill="#1E1B4B"/>
+    <text x="65" y="254" fill="#60A5FA" font-size="24">🥗</text>
+    <text x="118" y="238" fill="#F1F5F9" font-family="sans-serif" font-size="14" font-weight="bold">Healthy Meal Bowl</text>
+    <text x="118" y="256" fill="#F59E0B" font-family="monospace" font-size="12">PREPARING • 4 MINS</text>
+    <text x="118" y="274" fill="#64748B" font-family="sans-serif" font-size="11">Kitchen Queue #15</text>
+
+    <!-- Live socket event banner -->
+    <rect x="30" y="310" width="320" height="60" rx="12" fill="#1E1B4B" stroke="#8B5CF6" stroke-width="1" stroke-dasharray="4 4"/>
+    <circle cx="54" cy="340" r="6" fill="#10B981"/>
+    <text x="72" y="336" fill="#E2E8F0" font-family="monospace" font-size="11">WebSocket: OrderStateSync</text>
+    <text x="72" y="354" fill="#A78BFA" font-family="monospace" font-size="10">Socket.IO Event Stream Active</text>
+
+    <!-- Bottom Nav bar -->
+    <rect x="30" y="390" width="320" height="55" rx="18" fill="#0F172A"/>
+    <text x="65" y="423" fill="#A78BFA" font-family="sans-serif" font-size="12">🍽️ Menu</text>
+    <text x="155" y="423" fill="#64748B" font-family="sans-serif" font-size="12">📋 Orders</text>
+    <text x="250" y="423" fill="#64748B" font-family="sans-serif" font-size="12">👤 Profile</text>
+  </g>
+
+  <!-- Left Side Overview Card -->
+  <g transform="translate(90, 110)">
+    <rect width="520" height="480" rx="24" fill="#0C0F22" fill-opacity="0.9" stroke="#1E293B" stroke-width="1.5"/>
+    <rect width="520" height="480" rx="24" fill="none" stroke="url(#purpleGrad)" stroke-width="1.5" opacity="0.5"/>
+
+    <rect x="36" y="38" width="160" height="30" rx="15" fill="#581C87" fill-opacity="0.3" stroke="#A855F7" stroke-width="1"/>
+    <circle cx="52" cy="53" r="4" fill="#A855F7"/>
+    <text x="64" y="57" fill="#C084FC" font-family="monospace" font-size="11" font-weight="bold">CAMPUS WEB APP</text>
+
+    <text x="36" y="115" fill="#F8FAFC" font-family="'Space Grotesk', sans-serif" font-size="34" font-weight="bold">CAMPUS EATS</text>
+    <text x="36" y="145" fill="#94A3B8" font-family="sans-serif" font-size="15">Digital Food Ordering &amp; Kitchen Queue Platform</text>
+
+    <text x="36" y="195" fill="#CBD5E1" font-family="sans-serif" font-size="14" width="440">
+      Built to eliminate peak-hour lines across university dining facilities.
+    </text>
+    <text x="36" y="220" fill="#CBD5E1" font-family="sans-serif" font-size="14">
+      Features real-time menu discovery, socket-based order updates,
+    </text>
+    <text x="36" y="245" fill="#CBD5E1" font-family="sans-serif" font-size="14">
+      and automated token ticketing for campus vendors.
+    </text>
+
+    <!-- Stack badges -->
+    <g transform="translate(36, 280)">
+      <rect width="70" height="28" rx="6" fill="#1E293B"/>
+      <text x="14" y="18" fill="#67E8F9" font-family="monospace" font-size="11">React</text>
+
+      <rect x="80" width="100" height="28" rx="6" fill="#1E293B"/>
+      <text x="94" y="18" fill="#93C5FD" font-family="monospace" font-size="11">TypeScript</text>
+
+      <rect x="190" width="80" height="28" rx="6" fill="#1E293B"/>
+      <text x="204" y="18" fill="#C084FC" font-family="monospace" font-size="11">Express</text>
+
+      <rect x="280" width="80" height="28" rx="6" fill="#1E293B"/>
+      <text x="294" y="18" fill="#FDE047" font-family="monospace" font-size="11">MySQL</text>
+
+      <rect x="370" width="90" height="28" rx="6" fill="#1E293B"/>
+      <text x="382" y="18" fill="#F472B6" font-family="monospace" font-size="11">Socket.IO</text>
+    </g>
+
+    <!-- Links -->
+    <g transform="translate(36, 350)">
+      <rect width="448" height="52" rx="12" fill="#13162F" stroke="#334155"/>
+      <text x="24" y="31" fill="#38BDF8" font-family="monospace" font-size="13">LIVE: campus-eats-ruby.vercel.app</text>
+      <text x="380" y="31" fill="#A855F7" font-family="sans-serif" font-size="12" font-weight="bold">VISIT ↗</text>
+    </g>
+
+    <g transform="translate(36, 415)">
+      <rect width="448" height="40" rx="8" fill="#0F172A"/>
+      <text x="24" y="25" fill="#94A3B8" font-family="monospace" font-size="12">GitHub: namit27y-dotcom/CampusEats</text>
+    </g>
+  </g>
+</svg>
+

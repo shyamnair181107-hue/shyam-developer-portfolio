@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="32" fill="#070812"/>
+  <rect x="2" y="2" width="124" height="124" rx="30" fill="none" stroke="url(#favGrad)" stroke-width="4"/>
+  <text x="64" y="82" fill="#F5F7FF" font-family="'Space Grotesk', system-ui, sans-serif" font-size="52" font-weight="900" text-anchor="middle" letter-spacing="-1">SN</text>
+  <circle cx="100" cy="36" r="6" fill="#00F0FF"/>
+</svg>
+
