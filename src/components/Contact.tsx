@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, MapPin, CheckCircle2, AlertCircle, Loader2, MessageSquare, Github, Linkedin, Sparkles } from "lucide-react";
+import { Send, Mail, MapPin, Phone, CheckCircle2, AlertCircle, Loader2, MessageSquare, Github, Linkedin, Sparkles } from "lucide-react";
 import { contactDetails, socialLinks } from "@/data/socialLinks";
 import { profileData } from "@/data/profile";
 
@@ -131,6 +131,25 @@ export function Contact() {
                     </span>
                   </div>
                 </a>
+
+                {contactDetails.phone && (
+                  <a
+                    href={`tel:${contactDetails.phone.replace(/\s+/g, "")}`}
+                    className="flex items-center gap-3 p-3.5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-emerald-400/40 hover:bg-white/[0.06] transition-all group"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-emerald-400/10 border border-emerald-400/30 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <span className="font-mono text-[10px] text-text-secondary uppercase block">
+                        Contact Number
+                      </span>
+                      <span className="font-mono text-xs sm:text-sm text-white group-hover:text-emerald-400 transition-colors">
+                        {contactDetails.phone}
+                      </span>
+                    </div>
+                  </a>
+                )}
 
                 <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white/[0.03] border border-white/5">
                   <div className="w-10 h-10 rounded-xl bg-accent-violet/10 border border-accent-violet/30 flex items-center justify-center text-accent-violet">

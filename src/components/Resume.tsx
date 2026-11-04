@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { FileDown, Eye, CheckCircle2, Clock, Mail, MapPin, Sparkles, FileText } from "lucide-react";
+import { FileDown, Eye, CheckCircle2, Clock, Mail, MapPin, Phone, Sparkles, FileText } from "lucide-react";
 import { profileData } from "@/data/profile";
 import { contactDetails } from "@/data/socialLinks";
 
@@ -113,6 +113,12 @@ export function Resume() {
               <Mail className="w-3.5 h-3.5 text-accent-cyan" />
               <span>{contactDetails.email}</span>
             </div>
+            {contactDetails.phone && (
+              <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-emerald-400" />
+                <span>{contactDetails.phone}</span>
+              </div>
+            )}
             <div className="flex items-center gap-2">
               <MapPin className="w-3.5 h-3.5 text-accent-violet" />
               <span>{contactDetails.location}</span>

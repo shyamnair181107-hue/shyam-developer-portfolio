@@ -28,8 +28,8 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
-    id: "l-horizon-azure",
-    title: "L'Horizon Azure",
+    id: "grand-azure",
+    title: "Grand Azure",
     subtitle: "Resort Management & Systems",
     category: "Full-Stack Web Development | Hospitality Technology",
     badge: "Spotlight Project",
@@ -41,12 +41,12 @@ export const projectsData: ProjectItem[] = [
     gradient: "from-violet-600/30 via-indigo-900/30 to-cyan-500/20",
     accentColor: "#00F0FF",
     technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "TypeScript", "REST APIs"],
-    liveUrl: "https://resort-management-and-systems.vercel.app/",
+    liveUrl: "https://grand-azure-resort1.vercel.app/",
     githubUrl: undefined,
     problemStatement:
       "Traditional resort management often suffers from disconnected systems: guests face disjointed booking and concierge touchpoints, while resort operators juggle fragmented tools for room turnover, ledger balancing, and housekeeping dispatch.",
     solutionOverview:
-      "L'Horizon Azure unifies ultra-luxury guest experience with high-precision property management in a single responsive web ecosystem. It delivers a fluid guest portal coupled with an enterprise-grade administrative suite for real-time occupancy and task tracking.",
+      "Grand Azure unifies ultra-luxury guest experience with high-precision property management in a single responsive web ecosystem. It delivers a fluid guest portal coupled with an enterprise-grade administrative suite for real-time occupancy and task tracking.",
     architectureDetails:
       "Built with Next.js App Router for server-rendered speed and SEO, styled with custom Tailwind CSS utility layers for sleek glassmorphic luxury, and animated with Framer Motion for responsive interactive feedback.",
     keyFeatures: [

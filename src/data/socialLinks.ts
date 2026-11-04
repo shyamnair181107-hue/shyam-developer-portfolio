@@ -27,8 +27,11 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const contactDetails = {
+  // Replace with your real contact information:
   email: "contact@shyamsivadasan.dev",
+  phone: "+91 00000 00000",
   location: "India",
+  githubUrl: "https://github.com",
+  linkedinUrl: "https://linkedin.com",
   status: "Available for internships, technical hackathons & open source collaboration",
 };
-
