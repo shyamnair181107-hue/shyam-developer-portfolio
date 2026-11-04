@@ -61,6 +61,6 @@ export const profileData: ProfileData = {
     }
   ],
   // User can place their actual photo at /images/profile.jpg or update this path
-  profileImage: "/images/profile.svg",
+  profileImage: "/images/profile.jpg",
   resumeUrl: "/resume.pdf"
 };

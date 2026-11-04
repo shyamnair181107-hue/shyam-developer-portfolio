@@ -76,6 +76,11 @@ export default function RootLayout({
     description:
       "Second-year Computer Science Engineering student passionate about full-stack web development, software engineering, and emerging technologies.",
     nationality: "Indian",
+    email: "mailto:shyamnair181107@gmail.com",
+    sameAs: [
+      "https://github.com/shyamnair181107-hue",
+      "https://www.linkedin.com/in/shyam-nair-9b9090423"
+    ],
     knowsAbout: [
       "Computer Science Engineering",
       "Full-Stack Development",

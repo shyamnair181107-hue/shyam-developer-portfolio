@@ -125,6 +125,11 @@ export function Terminal() {
           <div className="text-xs space-y-1 font-mono">
             <p className="text-white font-bold">COMMUNICATION CHANNELS:</p>
             <p>Email: <a href={`mailto:${contactDetails.email}`} className="text-accent-cyan hover:underline">{contactDetails.email}</a></p>
+            {contactDetails.phone && (
+              <p>Phone: <a href={`tel:${contactDetails.phone.replace(/\s+/g, "")}`} className="text-emerald-400 hover:underline">{contactDetails.phone}</a></p>
+            )}
+            <p>GitHub: <a href={contactDetails.githubUrl} target="_blank" rel="noopener noreferrer" className="text-accent-cyan hover:underline">{contactDetails.githubUrl}</a></p>
+            <p>LinkedIn: <a href={contactDetails.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-accent-violet hover:underline">LinkedIn Profile</a></p>
             <p>Location: <span className="text-white">{contactDetails.location}</span></p>
             <p className="text-text-secondary">{contactDetails.status}</p>
           </div>
